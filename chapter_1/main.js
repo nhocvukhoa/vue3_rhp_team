@@ -6,6 +6,12 @@ const app = Vue.createApp({
             lastName: 'Khoa',
             isHello: false,
         }
+    },
+    methods: {
+        onChangeName() {
+            this.firstName = 'Ngọc';
+            this.lastName = 'Anh';
+        }
     }
 });
 

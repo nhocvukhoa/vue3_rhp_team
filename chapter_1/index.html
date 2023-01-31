@@ -9,7 +9,8 @@
 <body>
     <h1>Hello vue 3</h1>
     <section id="contact">
-        <h1>Hello {{ teamName }} and {{ isHello ? firstName + lastName : '' }}</h1>
+        <h1>Hello {{ teamName }} and {{ !isHello ? `${firstName} ${lastName}` : '' }}</h1>
+        <button @click="onChangeName">Change name</button>
     </section>
 </body>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
