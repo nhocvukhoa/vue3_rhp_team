@@ -12,8 +12,11 @@
             justify-content: center;
             width: 180px;
             height: 180px;
-            background: #dedede;
             margin-bottom: 30px;
+        }
+        .card img {
+            width: 100px;
+            height: 100px;
         }
     </style>
 </head>
@@ -28,8 +31,9 @@
         </div>
         <hr>
         <h1>Loop</h1>
-        <div class=" card-products card-container">
+        <div class=" card-products card-container" :class="classTesting">
             <div class="card" v-for="product in products">
+                <img clas="card-thumb" :src="product.thumb" alt="">
                 <h3>{{ product.name }}</h3>
                 <p>{{ product.price }}</p>
             </div>
