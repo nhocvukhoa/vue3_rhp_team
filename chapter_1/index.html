@@ -26,6 +26,14 @@
             <div class="card" @dblclick="onLogEvent">Double click</div>
             <div class="card" @mousemove="onMouseMoveEvent">Mouse move: {{ `${x} - ${y}`}}</div>
         </div>
+        <hr>
+        <h1>Loop</h1>
+        <div class=" card-products card-container">
+            <div class="card" v-for="product in products">
+                <h3>{{ product.name }}</h3>
+                <p>{{ product.price }}</p>
+            </div>
+        </div>
     </section>
 </body>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

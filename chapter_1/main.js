@@ -13,6 +13,16 @@ const app = Vue.createApp({
             isShowModal: false,
             x: 0,
             y: 0,
+            products: [
+                {
+                    name: 'Sản phẩm 1',
+                    price: 200.000
+                },
+                {
+                    name: 'Sản phẩm 2',
+                    price: 100.000
+                }
+            ]
         }
     },
     methods: {
