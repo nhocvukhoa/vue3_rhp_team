@@ -5,11 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Vue 3</title>
+    <style>
+        .card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 180px;
+            height: 180px;
+            background: #dedede;
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 <body>
     <h1>Hello vue 3</h1>
     <section id="contact">
-       
+        <div class="card-container">
+            <div class="card" @mouseover="onLogEvent">Mouse over (enter)</div>
+            <div class="card" @mouseleave="onLogEvent">Mouse leave</div>
+            <div class="card" @dblclick="onLogEvent">Double click</div>
+            <div class="card" @mousemove="onMouseMoveEvent">Mouse move: {{ `${x} - ${y}`}}</div>
+        </div>
     </section>
 </body>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
