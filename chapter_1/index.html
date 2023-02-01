@@ -6,17 +6,32 @@
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Vue 3</title>
     <style>
+        .card-products {
+            display: flex;
+            flex-direction: row;
+        }
+
         .card {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             width: 180px;
-            height: 180px;
+            height: 300px;
             margin-bottom: 30px;
         }
+
+        .card:hover {
+            cursor: pointer;
+        }
+
         .card img {
-            width: 100px;
-            height: 100px;
+            width: 180px;
+            height: auto;
+        }
+
+        .card.cart {
+            background: coral;
         }
     </style>
 </head>
@@ -32,10 +47,12 @@
         <hr>
         <h1>Loop</h1>
         <div class=" card-products card-container" :class="classTesting">
-            <div class="card" v-for="product in products">
-                <img clas="card-thumb" :src="product.thumb" alt="">
-                <h3>{{ product.name }}</h3>
-                <p>{{ product.price }}</p>
+            <div class="card" v-for="product in products"
+                :class="{ cart: product.isCart }"
+                @dblclick="onToggleCart($event, product)">
+                    <img class="card-thumb" :src="product.thumb" alt="">
+                    <h3>{{ product.name }}</h3>
+                    <p>{{ product.price }}</p>
             </div>
         </div>
     </section>

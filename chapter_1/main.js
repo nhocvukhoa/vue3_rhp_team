@@ -17,12 +17,14 @@ const app = Vue.createApp({
                 {
                     name: 'Sản phẩm 1',
                     price: 200.000,
-                    thumb: './assets/img_4.png'
+                    thumb: './assets/img_4.png',
+                    isCart: false,
                 },
                 {
                     name: 'Sản phẩm 2',
                     price: 100.000,
-                    thumb: './assets/img_4.png'
+                    thumb: './assets/img_4.png',
+                    isCart: true
                 }
             ],
             classTesting: 'flex'
@@ -41,6 +43,9 @@ const app = Vue.createApp({
             console.log('running mouse move event...', event);
             this.x = event.offsetX;
             this.y = event.offsetY;
+        },
+        onToggleCart(event, product) {
+            product.isCart = !product.isCart;
         }
     }
 });
