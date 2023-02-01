@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Vue 3</title>
+    <style>
+        .card-products {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 180px;
+            height: 300px;
+            background: #dedede;
+            margin-bottom: 30px;
+        }
+
+        .card:hover {
+            cursor: pointer;
+        }
+
+        .card img {
+            width: 180px;
+            height: auto;
+        }
+
+        .card.cart {
+            background: coral;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello vue 3</h1>
+    <section id="contact">
+        <div class="card-container">
+            <div class="card" @mouseover="onLogEvent">Mouse over (enter)</div>
+            <div class="card" @mouseleave="onLogEvent">Mouse leave</div>
+            <div class="card" @dblclick="onLogEvent">Double click</div>
+            <div class="card" @mousemove="onMouseMoveEvent">Mouse move: {{ `${x} - ${y}`}}</div>
+        </div>
+        <hr>
+        <h1>Loop</h1>
+        <div class=" card-products card-container" :class="classTesting">
+            <div class="card" v-for="product in productsComputed"
+                :class="{ cart: product.isCart }"
+                @dblclick="onToggleCart($event, product)">
+                    <img class="card-thumb" :src="product.thumb" alt="">
+                    <h3>{{ product.name }}</h3>
+                    <p>{{ product.price }}</p>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="main.js"></script>
+</html>
