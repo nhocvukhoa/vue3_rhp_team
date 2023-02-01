@@ -16,13 +16,13 @@ const app = Vue.createApp({
             products: [
                 {
                     name: 'Sản phẩm 1',
-                    price: 200.000,
+                    price: 200,
                     thumb: './assets/img_4.png',
                     isCart: false,
                 },
                 {
                     name: 'Sản phẩm 2',
-                    price: 100.000,
+                    price: 150,
                     thumb: './assets/img_4.png',
                     isCart: true
                 }
@@ -46,6 +46,11 @@ const app = Vue.createApp({
         },
         onToggleCart(event, product) {
             product.isCart = !product.isCart;
+        }
+    },
+    computed: {
+        productsComputed() {
+            return this.products.filter((product) => product.price < 200);
         }
     }
 });

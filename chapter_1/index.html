@@ -47,7 +47,7 @@
         <hr>
         <h1>Loop</h1>
         <div class=" card-products card-container" :class="classTesting">
-            <div class="card" v-for="product in products"
+            <div class="card" v-for="product in productsComputed"
                 :class="{ cart: product.isCart }"
                 @dblclick="onToggleCart($event, product)">
                     <img class="card-thumb" :src="product.thumb" alt="">
