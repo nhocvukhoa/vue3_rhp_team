@@ -1,15 +1,26 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <HelloWorld ref="hello" msg="Welcome to Your Vue.js App" />
+  <header-page ref="header" />
+  <button @click="onChangeMe">On change me</button>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
+import HeaderPage from "./components/HeaderPage.vue";
 
 export default {
   name: "App",
   components: {
     HelloWorld,
+    HeaderPage,
+  },
+  methods: {
+    onChangeMe() {
+      console.log("running here");
+      console.log(this.$refs.hello.onTesting());
+      console.log(this.$refs.header);
+    },
   },
 };
 </script>

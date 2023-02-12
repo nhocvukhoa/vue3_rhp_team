@@ -92,6 +92,11 @@ export default {
   props: {
     msg: String,
   },
+  methods: {
+    onTesting() {
+      console.log("Testing hello word");
+    },
+  },
 };
 </script>
 

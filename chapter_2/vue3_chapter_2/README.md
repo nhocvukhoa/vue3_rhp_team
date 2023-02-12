@@ -1,4 +1,4 @@
-# vue3_tutorial
+# vue3_chapter_2
 
 ## Project setup
 ```
