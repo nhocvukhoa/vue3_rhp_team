@@ -1,22 +1,31 @@
 <template>
   <h1>Hello Vue Cli</h1>
-  <base-page
+  <base-modal
     v-if="isShowModal"
     title="This is new title"
     content="This is content"
     theme="contact"
     @cancel="onToggleModal"
-  />
+  >
+    <template v-slot:header>
+      <h2>This is header</h2>
+    </template>
+    <label for="">Name</label>
+    <input type="text" value="name" />
+    <template v-slot:footer>
+      <button @click="onToggleModal">Cancel</button>
+    </template>
+  </base-modal>
   <button @click="onToggleModal">Toggle modal</button>
 </template>
 
 <script>
-import BasePage from "./components/BaseModal.vue";
+import BaseModal from "./components/BaseModal.vue";
 
 export default {
   name: "App",
   components: {
-    BasePage,
+    BaseModal,
   },
   data() {
     return {

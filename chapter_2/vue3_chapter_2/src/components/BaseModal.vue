@@ -1,12 +1,16 @@
 <template>
-  <div class="modal fade show" @click="onCloseModal">
+  <div class="modal fade show" @click.self="onCloseModal">
     <div class="modal-dialog">
       <div class="modal-content" :class="{ 'bg-purple': theme === 'contact' }">
         <div class="modal-header">
-          <h2>{{ title }}</h2>
+          <slot name="header"></slot>
         </div>
-        <div class="modal-body">{{ content }}</div>
-        <div class="modal-footer"></div>
+        <div class="modal-body">
+          <slot></slot>
+        </div>
+        <div class="modal-footer">
+          <slot name="footer"></slot>
+        </div>
       </div>
     </div>
   </div>
