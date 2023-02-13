@@ -1,5 +1,5 @@
 <template>
-  <div class="modal fade show">
+  <div class="modal fade show" @click="onCloseModal">
     <div class="modal-dialog">
       <div class="modal-content" :class="{ 'bg-purple': theme === 'contact' }">
         <div class="modal-header">
@@ -29,6 +29,11 @@ export default {
       validator(value) {
         return ["exxample", "sales", "contact"].includes(value);
       },
+    },
+  },
+  methods: {
+    onCloseModal() {
+      this.$emit("cancel");
     },
   },
 };
