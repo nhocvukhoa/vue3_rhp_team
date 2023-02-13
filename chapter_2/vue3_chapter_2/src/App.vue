@@ -1,21 +1,23 @@
 <template>
   <h1>Hello Vue Cli</h1>
-  <base-modal
-    v-if="isShowModal"
-    title="This is new title"
-    content="This is content"
-    theme="contact"
-    @cancel="onToggleModal"
-  >
-    <template v-slot:header>
-      <h2>This is header</h2>
-    </template>
-    <label for="">Name</label>
-    <input type="text" value="name" />
-    <template v-slot:footer>
-      <button @click="onToggleModal">Cancel</button>
-    </template>
-  </base-modal>
+  <teleport to="body">
+    <base-modal
+      v-if="isShowModal"
+      title="This is new title"
+      content="This is content"
+      theme="contact"
+      @cancel="onToggleModal"
+    >
+      <template v-slot:header>
+        <h2>This is header</h2>
+      </template>
+      <label for="">Name</label>
+      <input type="text" value="name" />
+      <template v-slot:footer>
+        <button @click="onToggleModal">Cancel</button>
+      </template>
+    </base-modal>
+  </teleport>
   <button @click="onToggleModal">Toggle modal</button>
 </template>
 
