@@ -16,4 +16,5 @@
 ### 3. Chapter 3: Binding dữ liệu trong form input
 1. Setup form
 2. Sử dụng v-model cho input và textarea
+3. Xử lý tốt hơn với @submit trong form
 ### 4. Chapter 4

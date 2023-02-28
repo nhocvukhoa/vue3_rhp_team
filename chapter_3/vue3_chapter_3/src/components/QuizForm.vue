@@ -1,5 +1,5 @@
 <template>
-  <form class="screen">
+  <form @submit.prevent="onSubmit" class="screen">
     <div class="container">
       <div class="row"><h1 class="title">Now, about your project...</h1></div>
       <div class="row">
@@ -132,6 +132,11 @@ export default {
         desc: "",
       },
     };
+  },
+  methods: {
+    onSubmit() {
+      console.log(this.quiz);
+    },
   },
 };
 </script>
