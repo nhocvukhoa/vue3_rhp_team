@@ -12,7 +12,13 @@
             <div class="form-group">
               <div class="form-item col">
                 <label for="name">What is your full name?</label>
-                <input id="name" type="text" placeholder="John Smith" />
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="John Smith"
+                  v-model="quiz.fullName"
+                />
+                {{ quiz.fullName }}
               </div>
               <div class="form-item col">
                 <label for="email">What is your email address?</label>
@@ -20,7 +26,9 @@
                   id="email"
                   type="email"
                   placeholder="skyalbert.960@gmail.com"
+                  v-model="quiz.email"
                 />
+                {{ quiz.email }}
               </div>
             </div>
           </div>
@@ -53,7 +61,9 @@
               <textarea
                 id="about"
                 placeholder="Hey RHP Team, I’d love  to talk to you about  branding this Something AI  project we’re working..."
+                v-model="quiz.desc"
               />
+              {{ quiz.desc }}
             </div>
             <div class="form-item">
               <ul class="items">
@@ -111,3 +121,17 @@
     </div>
   </form>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      quiz: {
+        fullName: "",
+        email: "",
+        desc: "",
+      },
+    };
+  },
+};
+</script>

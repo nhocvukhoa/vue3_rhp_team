@@ -15,4 +15,5 @@
 6. Teleport component: dịch chuyển khối code html ra ngoài chỗ nào đó
 ### 3. Chapter 3: Binding dữ liệu trong form input
 1. Setup form
+2. Sử dụng v-model cho input và textarea
 ### 4. Chapter 4
