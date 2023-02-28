@@ -18,4 +18,5 @@
 2. Sử dụng v-model cho input và textarea
 3. Xử lý tốt hơn với @submit trong form
 3. Sử dụng v-model cho checkbox
+4. Validate cho form
 ### 4. Chapter 4

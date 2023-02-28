@@ -13,12 +13,18 @@
               <div class="form-item col">
                 <label for="name">What is your full name?</label>
                 <input
+                  :class="{ error: error.status, success: success.status }"
                   id="name"
                   type="text"
                   placeholder="John Smith"
                   v-model="quiz.fullName"
                 />
-                {{ quiz.fullName }}
+                <p class="error-text" v-if="error.status">
+                  {{ error.message }}
+                </p>
+                <p class="success-text" v-if="success.status">
+                  {{ success.message }}
+                </p>
               </div>
               <div class="form-item col">
                 <label for="email">What is your email address?</label>
@@ -181,11 +187,44 @@ export default {
           name: "Compositing",
         },
       ],
+      error: {
+        message: "",
+        status: false,
+      },
+      success: {
+        message: "",
+        status: false,
+      },
     };
   },
   methods: {
     onSubmit() {
       console.log(this.quiz);
+
+      if (this.quiz.fullName.length < 6 || this.quiz.fullName.length > 18) {
+        this.error = {
+          message: "Look failed! Fullname should be 6-18 characters",
+          status: true,
+        };
+      } else if (
+        this.quiz.fullName.length > 5 &&
+        this.quiz.fullName.length < 19
+      ) {
+        this.success = {
+          message: "Look success",
+          status: true,
+        };
+
+        this.error = {
+          message: "",
+          status: false,
+        };
+      } else {
+        this.error = {
+          message: "",
+          status: false,
+        };
+      }
     },
   },
 };
