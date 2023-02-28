@@ -19,4 +19,6 @@
 3. Xử lý tốt hơn với @submit trong form
 3. Sử dụng v-model cho checkbox
 4. Validate cho form
-### 4. Chapter 4
+### 4. Chapter 4: Vue Router
+1. Cài đặt Vue Router 4 vào dự án: yarn add vue-router@4
+### 5. Chapter 5
