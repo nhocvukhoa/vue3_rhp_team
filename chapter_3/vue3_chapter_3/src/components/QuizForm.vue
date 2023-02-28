@@ -38,11 +38,15 @@
               about our services
             </p>
             <div class="row">
-              <div class="col-4">
+              <div class="col-4" v-for="option in jobOptions" :key="option.id">
                 <div class="block">
                   <label class="option">
-                    <span></span>
-                    <input type="checkbox" />
+                    <span>{{ option.name }}</span>
+                    <input
+                      type="checkbox"
+                      :value="option.id"
+                      v-model="quiz.jobs"
+                    />
                     <span class="checkmark"></span>
                   </label>
                 </div>
@@ -130,7 +134,46 @@ export default {
         fullName: "",
         email: "",
         desc: "",
+        jobs: [],
       },
+      jobOptions: [
+        {
+          id: 1,
+          name: "Branding",
+        },
+        {
+          id: 2,
+          name: "Strategy",
+        },
+        {
+          id: 3,
+          name: "Motion Design",
+        },
+        {
+          id: 4,
+          name: "Development",
+        },
+        {
+          id: 5,
+          name: "Product Design",
+        },
+        {
+          id: 6,
+          name: "Marketing",
+        },
+        {
+          id: 7,
+          name: "Coppywriting",
+        },
+        {
+          id: 8,
+          name: "Advisory",
+        },
+        {
+          id: 9,
+          name: "Compositing",
+        },
+      ],
     };
   },
   methods: {
