@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import HomePage from "./pages/HomePage.vue";
 import TransactionPage from "./pages/TransactionPage.vue";
+import TransactionDetail from "./pages/TransactionDetail.vue";
 
 const routes = [
   {
@@ -10,6 +11,10 @@ const routes = [
   {
     path: "/transaction",
     component: TransactionPage,
+  },
+  {
+    path: "/transaction/:id",
+    component: TransactionDetail,
   },
 ];
 
