@@ -21,4 +21,5 @@
 4. Validate cho form
 ### 4. Chapter 4: Vue Router
 1. Cài đặt Vue Router 4 vào dự án: yarn add vue-router@4
+2. Router-link
 ### 5. Chapter 5
