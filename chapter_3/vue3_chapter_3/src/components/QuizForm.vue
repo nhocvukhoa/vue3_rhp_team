@@ -39,7 +39,14 @@
             </p>
             <div class="row">
               <div class="col-4" v-for="option in jobOptions" :key="option.id">
-                <div class="block">
+                <div
+                  class="block"
+                  :style="{
+                    backgroundColor: quiz.jobs.includes(option.id)
+                      ? 'var(--primary)'
+                      : '',
+                  }"
+                >
                   <label class="option">
                     <span>{{ option.name }}</span>
                     <input
