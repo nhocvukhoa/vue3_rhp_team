@@ -1,9 +1,13 @@
 <template>
   <h1>Transaction page</h1>
   <div class="item" v-for="transaction in transactions" :key="transaction.id">
-    <router-link :to="`/transaction/${transaction.id}`">{{
-      transaction.name
-    }}</router-link>
+    <router-link
+      :to="{
+        name: 'transaction-detail-route',
+        params: { id: transaction.id },
+      }"
+      >{{ transaction.name }}</router-link
+    >
     <p>Giá: {{ transaction.price }}</p>
   </div>
 </template>

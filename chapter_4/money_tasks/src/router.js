@@ -7,14 +7,17 @@ import ErrorPage from "./pages/404Page.vue";
 const routes = [
   {
     path: "/",
+    name: "home-route",
     component: HomePage,
   },
   {
     path: "/transaction",
+    name: "transaction-route",
     component: TransactionPage,
   },
   {
     path: "/transaction/:id",
+    name: "transaction-detail-route",
     component: TransactionDetail,
   },
   // Custom reddirect

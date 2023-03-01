@@ -24,4 +24,5 @@
 2. Router-link
 3. Routes param và dynamic link
 4. Redirect và điều hướng 404
+5. Route name
 ### 5. Chapter 5
