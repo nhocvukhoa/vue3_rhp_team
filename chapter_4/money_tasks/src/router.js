@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import HomePage from "./pages/HomePage.vue";
 import TransactionPage from "./pages/TransactionPage.vue";
 import TransactionDetail from "./pages/TransactionDetail.vue";
+import ErrorPage from "./pages/404Page.vue";
 
 const routes = [
   {
@@ -15,6 +16,16 @@ const routes = [
   {
     path: "/transaction/:id",
     component: TransactionDetail,
+  },
+  // Custom reddirect
+  {
+    path: "/ts",
+    redirect: "/transaction",
+  },
+  // 404 Page
+  {
+    path: "/:pathMatch(.*)*",
+    component: ErrorPage,
   },
 ];
 

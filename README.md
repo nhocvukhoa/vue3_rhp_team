@@ -23,4 +23,5 @@
 1. Cài đặt Vue Router 4 vào dự án: yarn add vue-router@4
 2. Router-link
 3. Routes param và dynamic link
+4. Redirect và điều hướng 404
 ### 5. Chapter 5
