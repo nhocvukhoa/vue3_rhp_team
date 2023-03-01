@@ -1,4 +1,14 @@
 <template>
   <h1>Transaction detail page</h1>
-  <p>{{ $route.params.id }}</p>
+  <p>{{ id }}</p>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      id: this.$route.params.id,
+    };
+  },
+};
+</script>
