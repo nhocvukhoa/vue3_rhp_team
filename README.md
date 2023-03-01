@@ -26,4 +26,6 @@
 4. Redirect và điều hướng 404
 5. Route name
 6. Sử dụng button để chuyển trang
+7. Bảo vệ route với định nghĩa guard
+8. Lazy load
 ### 5. Chapter 5

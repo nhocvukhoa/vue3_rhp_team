@@ -1,8 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomePage from "./pages/HomePage.vue";
-import TransactionPage from "./pages/TransactionPage.vue";
-import TransactionDetail from "./pages/TransactionDetail.vue";
 import ErrorPage from "./pages/404Page.vue";
+
+const HomePage = () => import("./pages/HomePage.vue");
 
 const routes = [
   {
@@ -13,12 +12,23 @@ const routes = [
   {
     path: "/transaction",
     name: "transaction-route",
-    component: TransactionPage,
+    component: () => import("../src/pages/TransactionPage.vue"),
   },
   {
     path: "/transaction/:id",
     name: "transaction-detail-route",
-    component: TransactionDetail,
+    component: () => import("../src/pages/TransactionDetail.vue"),
+    // Per-Route Guard – Can thiệp vào Router được định nghĩa
+    // beforEnter: sẽ được gọi tới trước khi router được chuyển hướng
+    beforeEnter: (to, from, next) => {
+      console.log("Action route guard");
+      next();
+    },
+  },
+  {
+    path: "/transaction/edit",
+    name: "transaction-edit-route",
+    component: () => import("../src/pages/TransactionEdit.vue"),
   },
   // Custom reddirect
   {
