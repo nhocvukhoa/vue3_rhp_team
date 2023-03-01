@@ -25,4 +25,5 @@
 3. Routes param và dynamic link
 4. Redirect và điều hướng 404
 5. Route name
+6. Sử dụng button để chuyển trang
 ### 5. Chapter 5
