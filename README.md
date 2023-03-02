@@ -29,3 +29,6 @@
 7. Bảo vệ route với định nghĩa guard
 8. Lazy load
 ### 5. Chapter 5
+1. Cài đặt Json Server: npm install -g json-server
+2. Chạy thử server: json-server --watch data/db.json
+### 6. Chapter 6
