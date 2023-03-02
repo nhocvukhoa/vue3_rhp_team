@@ -19,4 +19,13 @@
 3. Xử lý tốt hơn với @submit trong form
 3. Sử dụng v-model cho checkbox
 4. Validate cho form
-### 4. Chapter 4
+### 4. Chapter 4: Vue Router
+1. Cài đặt Vue Router 4 vào dự án: yarn add vue-router@4
+2. Router-link
+3. Routes param và dynamic link
+4. Redirect và điều hướng 404
+5. Route name
+6. Sử dụng button để chuyển trang
+7. Bảo vệ route với định nghĩa guard
+8. Lazy load
+### 5. Chapter 5
