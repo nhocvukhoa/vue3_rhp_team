@@ -28,4 +28,13 @@
 6. Sử dụng button để chuyển trang
 7. Bảo vệ route với định nghĩa guard
 8. Lazy load
-### 5. Chapter 5
+### 5. Chapter 5: Fetching Data & Vue JS Component Lifecycle
+1. Cài đặt Json Server: npm install -g json-server
+2. Chạy thử server: json-server --watch data/db.json
+3. Vue JS Component Lifecycle
+https://user-images.githubusercontent.com/71363631/222313638-b61f0d0c-b7cc-410f-8a88-2e33e3a53610.png
+https://user-images.githubusercontent.com/71363631/222313732-468f4f3b-681a-4857-9c1a-7733851c86a3.png
+https://user-images.githubusercontent.com/71363631/222314190-a4423721-ab8e-411e-b397-08d3e4cc120c.png
+4. Fetch all data
+5. Fetch one and loading ...
+### 6. Chapter 6
