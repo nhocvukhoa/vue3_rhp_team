@@ -7,12 +7,13 @@
 </template>
 
 <script>
+import { ref } from "vue";
 export default {
   setup() {
-    const firstName = "Khoa";
+    const firstName = ref("Khoa");
 
     function onChangeSomeThing() {
-      console.log("onChangeSomeThing");
+      firstName.value = "Anh Khoa";
     }
 
     return {
