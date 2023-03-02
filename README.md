@@ -36,4 +36,5 @@ https://user-images.githubusercontent.com/71363631/222313638-b61f0d0c-b7cc-410f-
 https://user-images.githubusercontent.com/71363631/222313732-468f4f3b-681a-4857-9c1a-7733851c86a3.png
 https://user-images.githubusercontent.com/71363631/222314190-a4423721-ab8e-411e-b397-08d3e4cc120c.png
 4. Fetch all data
+5. Fetch one and loading ...
 ### 6. Chapter 6

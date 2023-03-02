@@ -1,6 +1,11 @@
 <template>
   <h1>Transaction detail page</h1>
-  <p>{{ id }}</p>
+  <div class="detail" v-if="transaction">
+    <p>ID: {{ id }}</p>
+    <p>Name: {{ transaction.name }}</p>
+    <p>Price: {{ transaction.price }}</p>
+  </div>
+  <div v-else>Loading transaction</div>
   <button @click="goEditPage">Edit</button>
 </template>
 
@@ -9,6 +14,7 @@ export default {
   data() {
     return {
       id: this.$route.params.id,
+      transaction: null,
     };
   },
   methods: {
@@ -24,6 +30,13 @@ export default {
   beforeRouteEnter(to, from, next) {
     console.log("Action route guard in component");
     next();
+  },
+  created() {
+    // Fetch one
+    fetch("http://localhost:3000/transactions/" + this.id)
+      .then((response) => response.json())
+      .then((data) => (this.transaction = data))
+      .then(() => console.log(this.transaction));
   },
 };
 </script>
