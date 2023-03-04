@@ -37,4 +37,11 @@ https://user-images.githubusercontent.com/71363631/222313732-468f4f3b-681a-4857-
 https://user-images.githubusercontent.com/71363631/222314190-a4423721-ab8e-411e-b397-08d3e4cc120c.png
 4. Fetch all data
 5. Fetch one and loading ...
-### 6. Chapter 6
+### 6. Chapter 6: Vue Composition API
+1. Hiểu về Vue Composition API
+https://user-images.githubusercontent.com/71363631/222439776-53e0b4f5-0654-40ad-b590-0bdb927dda35.png
+2. Data và method
+3. Reactivity dữ liệu với Ref()
+4. Computed
+5. Watch và Watch effect
+### 7. Chapter 7
