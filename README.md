@@ -42,4 +42,5 @@ https://user-images.githubusercontent.com/71363631/222314190-a4423721-ab8e-411e-
 https://user-images.githubusercontent.com/71363631/222439776-53e0b4f5-0654-40ad-b590-0bdb927dda35.png
 2. Data và method
 3. Reactivity dữ liệu với Ref()
+4. Computed
 ### 7. Chapter 7

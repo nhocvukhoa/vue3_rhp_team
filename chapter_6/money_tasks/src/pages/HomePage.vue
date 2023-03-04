@@ -11,11 +11,16 @@
     <p>Count by Reactive: {{ stateReactive.count }}</p>
     <button @click="increaseCountReactive">Increase count reactive</button>
     <button @click="increaseCountRef">Increase count ref</button>
+    <hr />
+    <input type="text" v-model="searchText" />
+    <ul>
+      <li v-for="(user, index) in usersFilter" :key="index">{{ user }}</li>
+    </ul>
   </div>
 </template>
 
 <script>
-import { ref, reactive } from "vue";
+import { ref, reactive, computed } from "vue";
 export default {
   setup() {
     const firstName = ref("Khoa");
@@ -29,6 +34,11 @@ export default {
     });
     const stateRef = ref(0);
     const stateReactive = reactive({ count: 0 });
+    const searchText = ref("");
+    const users = reactive(["Khoa", "Văn", "Thư"]);
+    const usersFilter = computed(() =>
+      users.filter((user) => user.includes(searchText.value))
+    );
 
     function increaseCountRef() {
       stateRef.value++;
@@ -80,6 +90,9 @@ export default {
       increaseCountRef,
       stateReactive,
       increaseCountReactive,
+      searchText,
+      users,
+      usersFilter,
     };
   },
 };
