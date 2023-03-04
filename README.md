@@ -43,4 +43,5 @@ https://user-images.githubusercontent.com/71363631/222439776-53e0b4f5-0654-40ad-
 2. Data và method
 3. Reactivity dữ liệu với Ref()
 4. Computed
+5. Watch và Watch effect
 ### 7. Chapter 7

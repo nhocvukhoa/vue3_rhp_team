@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { ref, reactive, computed } from "vue";
+import { ref, reactive, computed, watch, watchEffect } from "vue";
 export default {
   setup() {
     const firstName = ref("Khoa");
@@ -79,6 +79,17 @@ export default {
       console.log(city);
       console.log(car);
     }
+
+    watch(searchText, (newValue, oldValue) => {
+      console.log(newValue, oldValue);
+    });
+
+    // Tính năng như computed nhưng ko log ra dữ liệu
+    watchEffect(() => {
+      if (searchText.value) {
+        console.log("changed");
+      }
+    });
 
     return {
       firstName,
