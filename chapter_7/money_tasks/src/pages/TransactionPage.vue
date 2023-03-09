@@ -26,7 +26,7 @@ export default {
     // Fetch all data
     fetch("http://localhost:3000/transactions")
       .then((response) => response.json())
-      .then((data) => console.log(data));
+      .then((data) => (this.transactions = data));
   },
 };
 </script>
